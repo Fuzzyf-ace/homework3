@@ -1,4 +1,4 @@
-package com.example.homework3.Controller;
+package com.example.homework3.Controller.movie;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -9,7 +9,7 @@ import java.io.IOException;
 public class MovieController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("JSP/movie.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("JSP/movie/movie.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -18,9 +18,9 @@ public class MovieController extends HttpServlet {
         String selection = request.getParameter("selection");
         RequestDispatcher requestDispatcher = null;
         if (selection.equals("browse")) {
-            requestDispatcher = request.getRequestDispatcher("JSP/browse.jsp");
+            requestDispatcher = request.getRequestDispatcher("JSP/movie/browse.jsp");
         } else if (selection.equals("add")) {
-            requestDispatcher = request.getRequestDispatcher("JSP/add.jsp");
+            requestDispatcher = request.getRequestDispatcher("JSP/movie/add.jsp");
         }
         requestDispatcher.forward(request, response);
     }

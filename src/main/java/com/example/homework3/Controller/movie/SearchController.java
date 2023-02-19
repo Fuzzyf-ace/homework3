@@ -1,4 +1,4 @@
-package com.example.homework3.Controller;
+package com.example.homework3.Controller.movie;
 
 import com.example.homework3.Dao.MovieDao;
 import com.example.homework3.model.Movie;

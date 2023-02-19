@@ -1,4 +1,4 @@
-package com.example.homework3.Controller;
+package com.example.homework3.Controller.movie;
 
 import com.example.homework3.Dao.MovieDao;
 
@@ -17,14 +17,14 @@ public class AddController extends HttpServlet {
 //    final String PASSWORD = "p@ssw0rd";
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/add.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/movie/add.jsp");
         requestDispatcher.forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         movieDao.addMovie(request);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/added.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/movie/added.jsp");
         requestDispatcher.forward(request, response);
     }
 }

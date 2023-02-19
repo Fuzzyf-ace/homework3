@@ -4,13 +4,7 @@ package com.example.homework3.Dao;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.*;
 
-public class MovieDao {
-    final String USERNAME = "admin";
-    final String PASSWORD = "NUSRpJQAO7A6z19jGstM";
-
-    final String RDS_ENDPOINT = "csye6220.couxfnqwwltv.us-east-2.rds.amazonaws.com";
-
-    final String URL = "jdbc:mysql://" + RDS_ENDPOINT + ":3306/csye6220?createDatabaseIfNotExist=true&serverTimezone=UTC";
+public class MovieDao extends Dao {
 
     public void addMovie(HttpServletRequest request) {
         Connection connection = null;
@@ -30,8 +24,17 @@ public class MovieDao {
             statement.setString(4, genre);
             statement.setInt(5, year);
             statement.executeUpdate();
+            statement.close();
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            if (!connection.equals(null)) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 
