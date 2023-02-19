@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Welcome to our Movie Store</title>
+    <title></title>
 </head>
 <body>
+<h1>Welcome to our Movie Store</h1>
 <p>Please make your selection below:</p>
 <form action="movie" method="post">
     <select name="selection">

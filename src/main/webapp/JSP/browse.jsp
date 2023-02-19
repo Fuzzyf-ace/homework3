@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Searching Movies</title>
+    <title></title>
 </head>
 <body>
+<h1>Searching Movies</h1>
 <form action="movie/browse" method="post">
   Keyword: <input type="text" name="keyword">
   <div>
@@ -18,16 +19,21 @@
       <input type="radio" name="search_by" value="title" checked>Search By Tittle
     </label>
   </div>
-
-  <label>
-    <input type="radio" name="search_by" value="actor">Search By Actor
-  </label>
-  <label>
-    <input type="radio" name="search_by" value="actress">Search By actress
-  </label>
-  <label>
-    <input type="submit" value="Search Movies">
-  </label>
+  <div>
+    <label>
+      <input type="radio" name="search_by" value="actor">Search By Actor
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" name="search_by" value="actress">Search By actress
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="submit" value="Search Movies">
+    </label>
+  </div>
 </form>
 </body>
 </html>

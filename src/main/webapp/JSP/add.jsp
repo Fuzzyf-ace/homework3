@@ -13,24 +13,36 @@
 <body>
 <h1>Please enter the details below:</h1>
 <form action="/movie/add" method="post">
-    <label>
-        Movie Title: <input type="text" name="movie_title">
-    </label>
-    <label>
-        Lead Actor: <input type="text" name="lead_actor">
-    </label>
-    <label>
-        Lead Actress: <input type="text" name="lead_actress">
-    </label>
-    <label>
-        Genre: <input type="text" name="genre">
-    </label>
-    <label>
-        Year: <input type="number" name="year">
-    </label>
-    <label>
-        <input type="submit" value="Add Movie">
-    </label>
+    <div>
+        <label>
+            Movie Title: <input type="text" name="movie_title">
+        </label>
+    </div>
+    <div>
+        <label>
+            Lead Actor: <input type="text" name="lead_actor">
+        </label>
+    </div>
+    <div>
+        <label>
+            Lead Actress: <input type="text" name="lead_actress">
+        </label>
+    </div>
+    <div>
+        <label>
+            Genre: <input type="text" name="genre">
+        </label>
+    </div>
+    <div>
+        <label>
+            Year: <input type="number" name="year">
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="submit" value="Add Movie">
+        </label>
+    </div>
 </form>
 </body>
 </html>

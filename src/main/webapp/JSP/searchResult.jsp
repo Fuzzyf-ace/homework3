@@ -40,6 +40,6 @@
         <tr></tr>
     </table>
 </c:forEach>
-
+<a href="/movie">Click here to go back to the main page</a>
 </body>
 </html>
