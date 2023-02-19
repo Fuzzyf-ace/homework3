@@ -9,5 +9,12 @@
       <jdbc-url>jdbc:mysql://csye6220.couxfnqwwltv.us-east-2.rds.amazonaws.com/</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="yusuf" uuid="7cc5c380-9ba7-4180-ba6f-40b995dbb881">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://newton.neu.edu:3306/moviedb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
