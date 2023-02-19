@@ -27,7 +27,9 @@ public class ShopController extends HttpServlet {
             String password = nameAndPassword.substring(index+1);
             if (user.equals("admin")  && password.equals("admin")) {
                 HttpSession session = request.getSession(true);
-                session.setAttribute("cart", new ArrayList<String>());
+                if (session.getAttribute("cart") == null) {
+                    session.setAttribute("cart", new ArrayList<String>());
+                }
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/JSP/shop/homepage.jsp");
                 requestDispatcher.forward(request, response);
             } else {

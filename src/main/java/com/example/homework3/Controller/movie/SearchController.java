@@ -18,7 +18,7 @@ public class SearchController extends HttpServlet {
     MovieDao movieDao = new MovieDao();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/browse.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/movie/browse.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -50,7 +50,7 @@ public class SearchController extends HttpServlet {
 
         request.setAttribute("searchResult", movieList);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/searchResult.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../JSP/movie/searchResult.jsp");
         requestDispatcher.forward(request, response);
 
     }
